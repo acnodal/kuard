@@ -5,7 +5,7 @@
 ### Running
 
 ```
-kubectl run --restart=Never --image=gcr.io/kuar-demo/kuard-amd64:blue kuard
+kubectl run --restart=Never --image=purelb/kuard-amd64:blue kuard
 kubectl port-forward kuard 8080:8080
 ```
 
@@ -97,15 +97,15 @@ Images built will automatically have the git version (based on tag) applied.  In
 Originally (and in the Kubernetes Up & Running book) we had `1`, `2`, and `3`.  This confused people so going forward we will be using colors instead: `blue`, `green` and `purple`. This translates into the following container images:
 
 ```
-gcr.io/kuar-demo/kuard-amd64:v0.9-blue
-gcr.io/kuar-demo/kuard-amd64:blue
-gcr.io/kuar-demo/kuard-amd64:v0.9-green
-gcr.io/kuar-demo/kuard-amd64:green
-gcr.io/kuar-demo/kuard-amd64:v0.9-purple
-gcr.io/kuar-demo/kuard-amd64:purple
+purelb/kuard-amd64:v0.9-blue
+purelb/kuard-amd64:blue
+purelb/kuard-amd64:v0.9-green
+purelb/kuard-amd64:green
+purelb/kuard-amd64:v0.9-purple
+purelb/kuard-amd64:purple
 ```
 
-For documentation where you want to demonstrate using versions but use the latest version of this server, you can simply reference `gcr.io/kuar-demo/kuard-amd64:blue`.  You can then demonstrate an upgrade with `gcr.io/kuar-demo/kuard-amd64:green`.
+For documentation where you want to demonstrate using versions but use the latest version of this server, you can simply reference `purelb/kuard-amd64:blue`.  You can then demonstrate an upgrade with `purelb/kuard-amd64:green`.
 
 (Another way to think about it is that `:blue` is essentially `:latest-blue`)
 

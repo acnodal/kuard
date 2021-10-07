@@ -39,7 +39,8 @@ export default class Request extends React.Component {
 
     return (
       <div>
-        <div><b>Protocol:</b> <samp>{this.props.page.requestProto}</samp></div>
+        <div><b>Server Cluster:</b> {this.state.env["CLUSTER_NAME"]}</div>
+        <div><b>Server Node:</b> {this.state.env["NODE_NAME"]}</div>
         <div><b>Client Address:</b> <samp>{this.props.page.requestAddr}</samp></div>
         <div><b>Request:</b></div>
         <pre>

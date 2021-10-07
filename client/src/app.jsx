@@ -31,7 +31,6 @@ export default class App extends React.Component {
         <div className="title">
           <h1><img src="/static/images/logo-org.png" style={{height: "48px"}}/></h1>
           <h2>Echoserver</h2>
-          <div><b>Server:</b> {this.props.page.hostname}</div>
         </div>
 
         <div className="nav-container">

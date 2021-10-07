@@ -39,8 +39,6 @@ export default class App extends React.Component {
               <Location path={base+"/"} apiPath={base+"/env/api"} handler={Request} page={this.props.page}/>
             </Locations>
           </div>
-          <div><b>Demo application version:</b> <i>{this.props.page.version}</i></div>
-          <div><b>Serving on:</b> {addrs}</div>
         </div>
       </div>
     )

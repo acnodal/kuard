@@ -21,22 +21,6 @@ export default class Request extends React.Component {
 
 
   render () {
-    let args = [];
-    for (let [idx, arg] of this.state.commandLine.entries()) {
-      args.push(<code key={idx}>{arg}</code>)
-      args.push(" ")
-    }
-
-    let rows = [];
-    for (let k in this.state.env) {
-      rows.push(
-        <tr key={k}>
-          <td><samp>{k}</samp></td>
-          <td><samp>{this.state.env[k]}</samp></td>
-        </tr>
-      )
-    }
-
     return (
       <div>
         <div><b>Server Cluster:</b> {this.state.env["CLUSTER_NAME"]}</div>
@@ -46,21 +30,6 @@ export default class Request extends React.Component {
         <pre>
           {this.props.page.requestDump}
         </pre>
-        <div><b>Server Environment:</b></div>
-        <table className="table table-condensed table-bordered">
-          <thead>
-            <tr>
-              <th>Key</th><th>Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows}
-          </tbody>
-        </table>
-        <dl>
-          <dt><b>Command Line:</b></dt>
-          <dd>{args}</dd>
-        </dl>
       </div>
     )
   }

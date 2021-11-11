@@ -29,7 +29,7 @@ export default class App extends React.Component {
     return (
       <div className="top">
         <div className="title">
-          <h1><img src="/static/images/logo-org.png" style={{height: "48px"}}/></h1>
+          <h1><img src="https://www.acnodal.io/images/logo-org.png" style={{height: "48px"}}/></h1>
           <h2>Echoserver</h2>
         </div>
 
